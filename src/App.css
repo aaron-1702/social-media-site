@@ -1,0 +1,246 @@
+.page-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+  display: grid;
+  gap: 20px;
+}
+
+.hero-panel,
+.links-section,
+.footer-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+}
+
+.hero-panel {
+  padding: 40px;
+  border-radius: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.hero-panel::before {
+  content: '';
+  position: absolute;
+  inset: auto -120px -160px auto;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(95, 72, 255, 0.28), transparent 70%);
+  pointer-events: none;
+}
+
+.profile-badge {
+  width: fit-content;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #b8a8ff;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-panel h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 0.95;
+  max-width: 10ch;
+}
+
+.hero-copy {
+  margin: 0;
+  max-width: 62ch;
+  color: rgba(247, 236, 255, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.hero-copy span {
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95em;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.primary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8e6cff, #ff8de1);
+  color: #0d0d0d;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 16px 35px rgba(142, 108, 255, 0.3);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.primary-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(142, 108, 255, 0.35);
+}
+
+.note {
+  color: rgba(247, 236, 255, 0.65);
+  font-size: 0.95rem;
+}
+
+.links-section {
+  padding: 28px;
+  border-radius: 24px;
+}
+
+.section-header {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.section-header h2,
+.footer-panel h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.section-header p,
+.footer-panel p {
+  margin: 0;
+  color: rgba(247, 236, 255, 0.7);
+  line-height: 1.6;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.link-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(184, 168, 255, 0.45);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.link-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(142, 108, 255, 0.25), rgba(255, 141, 225, 0.18));
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.link-copy {
+  display: grid;
+  gap: 3px;
+}
+
+.link-copy strong {
+  font-size: 1.02rem;
+}
+
+.link-copy span,
+.link-copy small {
+  color: rgba(247, 236, 255, 0.68);
+}
+
+.link-copy small {
+  font-size: 0.88rem;
+}
+
+.card-arrow {
+  color: rgba(247, 236, 255, 0.55);
+}
+
+.footer-panel {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 18px;
+  padding: 24px 28px;
+  border-radius: 24px;
+}
+
+.footer-tip {
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-tip span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #b8a8ff;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 860px) {
+  .page-shell {
+    width: min(100% - 20px, 1120px);
+    padding-top: 20px;
+  }
+
+  .hero-panel,
+  .links-section,
+  .footer-panel {
+    border-radius: 22px;
+  }
+
+  .hero-panel {
+    padding: 26px;
+  }
+
+  .links-section,
+  .footer-panel {
+    padding: 20px;
+  }
+
+  .link-grid,
+  .footer-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .link-card {
+    grid-template-columns: auto 1fr;
+  }
+
+  .card-arrow {
+    display: none;
+  }
+
+  .hero-panel h1 {
+    max-width: 100%;
+  }
+}
