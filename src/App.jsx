@@ -1,11 +1,14 @@
+import { ExternalLink } from 'lucide-react'
 import {
-  Link2,
-  Music2,
-  Gamepad2,
-  MessageCircle,
-  Mic2,
-  ExternalLink,
-} from 'lucide-react'
+  FaInstagram,
+  FaTiktok,
+  FaYoutube,
+  FaSpotify,
+  FaSoundcloud,
+  FaSteam,
+  FaDiscord,
+} from 'react-icons/fa6'
+import { SiRiotgames } from 'react-icons/si'
 import './App.css'
 
 const socialLinks = [
@@ -13,56 +16,56 @@ const socialLinks = [
     name: 'Instagram',
     label: '@_aaron1702',
     href: 'https://instagram.com/_aaron1702',
-    icon: Link2,
+    icon: FaInstagram,
     hint: 'Reels, Storys, Bilder',
   },
   {
     name: 'TikTok',
     label: '@aaron.thm',
     href: 'https://tiktok.com/@aaron.thm',
-    icon: Music2,
+    icon: FaTiktok,
     hint: 'Shorts, Clips, Trends',
   },
   {
     name: 'YouTube',
     label: 'Aaron Thamm',
     href: 'https://youtube.com/@keinplan9827',
-    icon: Link2,
+    icon: FaYoutube,
     hint: 'Videos, Uploads, Livestreams',
   },
   {
     name: 'Spotify',
     label: 'Musik',
     href: 'https://open.spotify.com/user/uk9ti5jzloql7zivx3oqhj9h3?si=29b510df14594d18',
-    icon: Music2,
+    icon: FaSpotify,
     hint: 'Playlists, Artist-Profil, Tracks',
   },
   {
     name: 'SoundCloud',
     label: 'Musik',
     href: 'https://soundcloud.com/aaron-thamm-243913338',
-    icon: Mic2,
+    icon: FaSoundcloud,
     hint: 'Demos, Remixes, Uploads',
   },
   {
     name: 'Riot Games',
     label: 'WheatlessWizard#Wheat',
     href: 'https://www.leagueofgraphs.com/summoner/euw/wheatlesswizard-wheat',
-    icon: Gamepad2,
+    icon: SiRiotgames,
     hint: 'League, Valorant, TFT',
   },
   {
     name: 'Steam',
     label: 'Steam-Profil',
     href: 'https://steamcommunity.com/profiles/76561199214310536/',
-    icon: Gamepad2,
+    icon: FaSteam,
     hint: 'Games, Wishlist, Community',
   },
   {
     name: 'Discord',
     label: 'aaron1702',
     href: 'https://discord.com/users/681528976103047177',
-    icon: MessageCircle,
+    icon: FaDiscord,
     hint: 'Server, Kontakt, Community',
   },
 ]
@@ -79,7 +82,12 @@ function App() {
         </p>
 
         <div className="hero-actions">
-          <a className="primary-link" href="#links-grid">
+          <a
+            className="primary-link"
+            href="https://discord.com/users/681528976103047177"
+            target="_blank"
+            rel="noreferrer"
+          >
             Profile ansehen
             <ExternalLink size={18} />
           </a>
