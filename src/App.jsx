@@ -74,25 +74,34 @@ function App() {
   return (
     <main className="page-shell">
       <section className="hero-panel">
-        <div className="profile-badge">AARON</div>
-        <h1>Alle meine Links auf einen Blick</h1>
-        <p className="hero-copy">
-          Willkommen auf meiner Link-Seite. Wenn du mich auf Social Media, Musik oder
-          Gaming-Plattformen suchst, findest du hier alles direkt gesammelt.
-        </p>
+        <div className="hero-content">
+          <div className="profile-badge">AARON</div>
+          <h1>Alle meine Links auf einen Blick</h1>
+          <p className="hero-copy">
+            Willkommen auf meiner Link-Seite. Wenn du mich auf Social Media, Musik oder
+            Gaming-Plattformen suchst, findest du hier alles direkt gesammelt.
+          </p>
 
-        <div className="hero-actions">
-          <a
-            className="primary-link"
-            href="https://discord.com/users/681528976103047177"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Profile ansehen
-            <ExternalLink size={18} />
-          </a>
-          <span className="note">Direkt aus meinem Discord-Profil erreichbar</span>
+          <div className="hero-actions">
+            <a
+              className="primary-link"
+              href="https://discord.com/users/681528976103047177"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Profile ansehen
+              <ExternalLink size={18} />
+            </a>
+            <span className="note">Direkt aus meinem Discord-Profil erreichbar</span>
+          </div>
         </div>
+
+        <aside className="hero-gif" aria-label="Scuba GIF">
+          <img
+            src="https://media.tenor.com/94j7d6r8kNUAAAAj/scuba.gif"
+            alt="Scuba Katze"
+          />
+        </aside>
       </section>
 
       <section className="links-section" id="links-grid">
