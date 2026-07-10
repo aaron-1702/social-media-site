@@ -7,6 +7,7 @@ import {
   FaSoundcloud,
   FaSteam,
   FaDiscord,
+  FaGift,
 } from 'react-icons/fa6'
 import { SiRiotgames } from 'react-icons/si'
 import './App.css'
@@ -34,6 +35,27 @@ const socialLinks = [
     hint: 'Videos, Uploads, Livestreams',
   },
   {
+    name: 'Discord',
+    label: 'aaron1702',
+    href: 'https://discord.com/users/681528976103047177',
+    icon: FaDiscord,
+    hint: 'Server, Kontakt, Community',
+  },
+  {
+    name: 'Steam',
+    label: 'Steam-Profil',
+    href: 'https://steamcommunity.com/profiles/76561199214310536/',
+    icon: FaSteam,
+    hint: 'Games, Wishlist, Community',
+  },
+  {
+    name: 'Riot Games',
+    label: 'WheatlessWizard#Wheat',
+    href: 'https://www.leagueofgraphs.com/summoner/euw/wheatlesswizard-wheat',
+    icon: SiRiotgames,
+    hint: 'League, Valorant, TFT',
+  },
+  {
     name: 'Spotify',
     label: 'Musik',
     href: 'https://open.spotify.com/user/uk9ti5jzloql7zivx3oqhj9h3?si=29b510df14594d18',
@@ -47,27 +69,6 @@ const socialLinks = [
     icon: FaSoundcloud,
     hint: 'Demos, Remixes, Uploads',
   },
-  {
-    name: 'Riot Games',
-    label: 'WheatlessWizard#Wheat',
-    href: 'https://www.leagueofgraphs.com/summoner/euw/wheatlesswizard-wheat',
-    icon: SiRiotgames,
-    hint: 'League, Valorant, TFT',
-  },
-  {
-    name: 'Steam',
-    label: 'Steam-Profil',
-    href: 'https://steamcommunity.com/profiles/76561199214310536/',
-    icon: FaSteam,
-    hint: 'Games, Wishlist, Community',
-  },
-  {
-    name: 'Discord',
-    label: 'aaron1702',
-    href: 'https://discord.com/users/681528976103047177',
-    icon: FaDiscord,
-    hint: 'Server, Kontakt, Community',
-  },
 ]
 
 function App() {
@@ -77,10 +78,6 @@ function App() {
         <div className="hero-content">
           <div className="profile-badge">AARON</div>
           <h1>Alle meine Links auf einen Blick</h1>
-          <p className="hero-copy">
-            Willkommen auf meiner Link-Seite. Wenn du mich auf Social Media, Musik oder
-            Gaming-Plattformen suchst, findest du hier alles direkt gesammelt.
-          </p>
 
           <div className="hero-actions">
             <a
@@ -108,7 +105,7 @@ function App() {
         <div className="section-header">
           <h2>Folge mir hier</h2>
           <p>
-            Tippe auf eine Plattform, um mein Profil direkt zu oeffnen.
+            Tippe auf eine Plattform, um mein Profil direkt zu öffnen.
           </p>
         </div>
 
@@ -142,13 +139,24 @@ function App() {
       <section className="footer-panel">
         <div>
           <h3>Danke fuers Vorbeischauen</h3>
-          <p>
-            Wenn du up to date bleiben willst, folge mir auf den Plattformen oben.
-          </p>
-        </div>
-        <div className="footer-tip">
-          <span>Quick Note</span>
-          <p>Der Link ist fuer Desktop und Mobile optimiert, perfekt zum Teilen auf Discord.</p>
+          <div className="link-grid">
+            <a
+              className="link-card"
+              href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="link-icon">
+                <FaGift size={22} />
+              </div>
+              <div className="link-copy">
+                <strong>Free Giveaway</strong>
+                <span>YouTube</span>
+                <small>Free RP, Geschenke, Aktionen</small>
+              </div>
+              <ExternalLink size={18} className="card-arrow" />
+            </a>
+          </div>
         </div>
       </section>
     </main>
