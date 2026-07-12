@@ -89,7 +89,6 @@ function App() {
               Profile ansehen
               <ExternalLink size={18} />
             </a>
-            <span className="note">Direkt aus meinem Discord-Profil erreichbar</span>
           </div>
         </div>
 
@@ -138,7 +137,7 @@ function App() {
 
       <section className="footer-panel">
         <div>
-          <h3>Danke fuers Vorbeischauen</h3>
+          <h3>Danke fürs Vorbeischauen</h3>
           <div className="link-grid">
             <a
               className="link-card"
